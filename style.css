@@ -487,6 +487,53 @@ h1 {
     color: rgba(226, 232, 240, 0.68);
 }
 
+.site-footer {
+    margin-top: 40px;
+    padding: 18px 0 26px;
+    border-top: 1px solid rgba(148, 163, 184, 0.18);
+    background: linear-gradient(180deg, rgba(2, 6, 23, 0.28), rgba(2, 6, 23, 0.08));
+}
+
+.site-footer__inner {
+    width: min(1540px, calc(100% - 56px));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 18px;
+}
+
+.site-footer__links,
+.site-footer__social {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.site-footer__social {
+    justify-content: flex-end;
+}
+
+.site-footer__brand {
+    font-size: 1.05rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #e2e8f0;
+}
+
+.site-footer a {
+    color: rgba(226, 232, 240, 0.84);
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 700;
+}
+
+.site-footer a:hover {
+    color: #7fb0ff;
+}
+
 .scroll-to-top {
     position: fixed;
     bottom: 28px;
@@ -571,6 +618,18 @@ h1 {
     .cars-grid {
         grid-template-columns: 1fr;
     }
+
+    .site-footer__inner {
+        width: min(100% - 24px, 1540px);
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .site-footer__social {
+        justify-content: center;
+    }
 }
 
 @media (max-width: 600px) {
@@ -612,6 +671,16 @@ h1 {
     .content-grid,
     .stats-grid {
         grid-template-columns: 1fr;
+    }
+
+    .site-footer {
+        margin-top: 28px;
+        padding-top: 16px;
+        padding-bottom: 20px;
+    }
+
+    .site-footer__inner {
+        width: min(100% - 16px, 1540px);
     }
 
     .scroll-to-top {
