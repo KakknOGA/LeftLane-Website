@@ -214,8 +214,32 @@ h1 {
 
 .slideshow {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
+}
+
+.slide--cartflash {
+    background-image:
+        linear-gradient(180deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.18)),
+        url("images/cartflash.jpg"),
+        url("../images/cartflash.jpg"),
+        linear-gradient(135deg, #334155, #0f172a);
+}
+
+.slide--cartepicback {
+    background-image:
+        linear-gradient(180deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.18)),
+        url("images/cartepicback.jpg"),
+        url("../images/cartepicback.jpg"),
+        linear-gradient(135deg, #334155, #0f172a);
+}
+
+.slide--desertcar {
+    background-image:
+        linear-gradient(180deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.18)),
+        url("images/desertcar.jpg"),
+        url("../images/desertcar.jpg"),
+        linear-gradient(135deg, #334155, #0f172a);
 }
 
 .slide {
@@ -403,6 +427,21 @@ h1 {
     content: "Hero-Feature Bild";
     color: rgba(226, 232, 240, 0.6);
     font-weight: 800;
+}
+
+.hero-feature--cartflash {
+    background:
+        linear-gradient(180deg, rgba(2, 6, 23, 0.15), rgba(2, 6, 23, 0.34)),
+        url("images/cartflash.jpg"),
+        url("../images/cartflash.jpg"),
+        linear-gradient(135deg, #4b5563, #0f172a);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-feature--cartflash::before {
+    content: "";
 }
 
 .feature-cards {
