@@ -3,14 +3,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (!scrollToTopBtn) return;
 
-    // Scroll-to-Top Button zeigen/verstecken basierend auf Scrollposition
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 300) {
+    function updateScrollButtonVisibility() {
+        if (window.scrollY > 120) {
             scrollToTopBtn.classList.add('active');
         } else {
             scrollToTopBtn.classList.remove('active');
         }
+    }
+
+    // Scroll-to-Top Button zeigen/verstecken basierend auf Scrollposition
+    window.addEventListener('scroll', function() {
+        updateScrollButtonVisibility();
     });
+
+    // Auch direkt beim Laden den korrekten Zustand setzen.
+    updateScrollButtonVisibility();
 
     // Zum Top scrollen wenn Button geklickt wird
     scrollToTopBtn.addEventListener('click', function() {
