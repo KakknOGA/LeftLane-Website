@@ -29,6 +29,16 @@ body {
     font-weight: 800;
     letter-spacing: 0.03em;
     color: #cbd5e1;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0;
+    transition: color 0.2s ease;
+}
+
+.brand:hover {
+    color: #e2e8f0;
 }
 
 .topnav {
@@ -363,6 +373,13 @@ h1 {
     overflow: hidden;
 }
 
+.featured-section__image--home {
+    background-image: linear-gradient(180deg, rgba(2, 6, 23, 0.08), rgba(2, 6, 23, 0.25)), url("images/Carpicheader.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .hero-feature {
     margin-top: 28px;
     min-height: 450px;
@@ -464,6 +481,41 @@ h1 {
     color: rgba(226, 232, 240, 0.68);
 }
 
+.scroll-to-top {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #2d63ff, #2555db);
+    border: 1px solid rgba(127, 176, 255, 0.3);
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 8px 24px rgba(45, 99, 255, 0.3);
+    z-index: 999;
+}
+
+.scroll-to-top:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(45, 99, 255, 0.4);
+}
+
+.scroll-to-top.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-to-top svg {
+    display: block;
+}
+
 @media (max-width: 900px) {
     main {
         width: min(100% - 24px, 1540px);
@@ -554,5 +606,17 @@ h1 {
     .content-grid,
     .stats-grid {
         grid-template-columns: 1fr;
+    }
+
+    .scroll-to-top {
+        width: 48px;
+        height: 48px;
+        bottom: 16px;
+        right: 16px;
+    }
+
+    .scroll-to-top svg {
+        width: 18px;
+        height: 18px;
     }
 }
