@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie | LeftLane</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="site-shell">
+        <header class="topbar">
+            <div class="brand">LeftLane</div>
+            <nav class="topnav" aria-label="Hauptnavigation">
+                <a class="navlink" href="index.html">Start</a>
+                <a class="navlink navlink--active" href="galerie.html">Galerie</a>
+                <a class="navlink" href="video.html">Video</a>
+                <a class="navlink" href="ueber-uns.html">Über uns</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="hero__copy">
+                    <p class="eyebrow">Galerie</p>
+                    <h1>Große Bildflächen mit starkem Fokus</h1>
+                    <p class="hero__text">Diese Seite zeigt die Slideshow im gleichen Stil wie die Startseite, aber mit mehr Raum für Bilder, Titel und eine klare visuelle Hierarchie.</p>
+                    <div class="hero__actions">
+                        <a class="button button--primary" href="index.html">Zur Startseite</a>
+                        <a class="button button--ghost" href="ueber-uns.html">Über uns</a>
+                    </div>
+                </div>
+
+                <div class="hero__visual" aria-label="Galerie Platzhalter">
+                    <div class="hero__visual-label">Galerie Übersicht</div>
+                </div>
+            </section>
+
+            <section class="panel" id="slideshow">
+                <div class="section__header section__header--split">
+                    <div>
+                        <p class="eyebrow">Slideshow</p>
+                        <h2>Bildreihe mit Karten</h2>
+                    </div>
+                    <p class="section__note">Hier kannst du später echte Bilder, Logos oder Event-Fotos einbauen.</p>
+                </div>
+
+                <div class="slideshow" aria-label="Bild-Slideshow Platzhalter">
+                    <article class="slide slide--featured" data-label="Bild 01"></article>
+                    <article class="slide slide--mid" data-label="Bild 02"></article>
+                    <article class="slide slide--dark" data-label="Bild 03"></article>
+                    <article class="slide slide--glow" data-label="Bild 04"></article>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
