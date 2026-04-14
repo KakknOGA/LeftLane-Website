@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,46 +7,66 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="hero">
-        <div class="hero__content">
-            <p class="eyebrow">LeftLane</p>
-            <h1>Starke visuelle Struktur für deine Website</h1>
-            <p class="hero__text">Oben ein großes Banner mit Video-Platzhalter, darunter eine Bild-Slideshow und weiter unten ein eingebettetes YouTube-Video.</p>
-        </div>
-        <div class="hero__video-placeholder" aria-label="Platzhalter für Banner-Video">
-            <span>Banner-Video Platzhalter</span>
-        </div>
-    </header>
+    <div class="site-shell">
+        <header class="topbar">
+            <div class="brand">LeftLane</div>
+            <nav class="topnav" aria-label="Hauptnavigation">
+                <a href="#hero">Start</a>
+                <a href="#slideshow">Galerie</a>
+                <a href="#video">Video</a>
+            </nav>
+        </header>
 
-    <main class="page">
-        <section class="section">
-            <div class="section__header">
-                <p class="eyebrow">Slideshow</p>
-                <h2>Bildbereich</h2>
-            </div>
+        <main>
+            <section class="hero" id="hero">
+                <div class="hero__copy">
+                    <p class="eyebrow">Inspiration Layout</p>
+                    <h1>Ein starkes, dunkles Layout mit klarem Fokus</h1>
+                    <p class="hero__text">Oben ein großes leeres Bannerfeld als Platzhalter für ein Video oder Bild, darunter eine kompakte Bild-Slideshow und weiter unten ein eingebettetes YouTube-Video.</p>
+                    <div class="hero__actions">
+                        <a class="button button--primary" href="#slideshow">Zur Galerie</a>
+                        <a class="button button--ghost" href="#video">Zum Video</a>
+                    </div>
+                </div>
 
-            <div class="slideshow" aria-label="Bild-Slideshow Platzhalter">
-                <article class="slide slide--active">Bild 01</article>
-                <article class="slide">Bild 02</article>
-                <article class="slide">Bild 03</article>
-            </div>
-        </section>
+                <div class="hero__visual" aria-label="Leeres Bannerfeld">
+                    <div class="hero__visual-label">Leeres Bannerfeld</div>
+                </div>
+            </section>
 
-        <section class="section section--video">
-            <div class="section__header">
-                <p class="eyebrow">YouTube</p>
-                <h2>Video-Einbettung</h2>
-            </div>
+            <section class="panel" id="slideshow">
+                <div class="section__header section__header--split">
+                    <div>
+                        <p class="eyebrow">Slideshow</p>
+                        <h2>Bildbereich mit Karten</h2>
+                    </div>
+                    <p class="section__note">Später kannst du hier echte Bilder oder einen Slider einbauen.</p>
+                </div>
 
-            <div class="youtube-embed">
-                <iframe
-                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen>
-                </iframe>
-            </div>
-        </section>
-    </main>
+                <div class="slideshow" aria-label="Bild-Slideshow Platzhalter">
+                    <article class="slide slide--featured" data-label="Bild 01"></article>
+                    <article class="slide slide--mid" data-label="Bild 02"></article>
+                    <article class="slide slide--dark" data-label="Bild 03"></article>
+                    <article class="slide slide--glow" data-label="Bild 04"></article>
+                </div>
+            </section>
+
+            <section class="panel panel--video" id="video">
+                <div class="section__header">
+                    <p class="eyebrow">YouTube</p>
+                    <h2>Video-Einbettung</h2>
+                </div>
+
+                <div class="youtube-embed">
+                    <iframe
+                        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </section>
+        </main>
+    </div>
 </body>
 </html>
