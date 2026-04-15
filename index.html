@@ -1,85 +1,208 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LeftLane Website</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Left Lane | Rennspiel Projekt</title>
+  <meta name="description" content="Left Lane ist ein stylischer Rennfahr-Simulator für das Handy mit Multiplayer, Bots, anpassbaren Fahrzeugen und versteckten Easter Eggs." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="site-shell">
-        <header class="topbar">
-            <a class="brand" href="index.html">LeftLane</a>
-            <nav class="topnav" aria-label="Hauptnavigation">
-                <a class="navlink navlink--active" href="index.html">Start</a>
-                <a class="navlink" href="autos.html">Autos</a>
-                <a class="navlink" href="galerie.html">Galerie</a>
-                <a class="navlink" href="video.html">Video</a>
-                <a class="navlink" href="ueber-uns.html">Über uns</a>
-            </nav>
-        </header>
-
-        <main>
-            <section class="featured-section">
-                <div class="featured-section__copy">
-                    <p class="eyebrow">Willkommen</p>
-                    <h1>Ein revolutionäres Rennspiel-Erlebnis</h1>
-                    <p>Komm in die Welt von LeftLane und entdecke ein atemberaubendes Rennspiel-Abenteuer. Mit dutzenden Autos, mehrstöckigen Levels und einer immersiven Grafik erleben Sie Racing auf einer neuen Ebene. Fahren Sie in fesselnden Kampagnen, nehmen Sie an Online-Rennen teil oder erkunden Sie die Welt im freien Modus. Mit regelmäßigen Updates und neuen Inhalten bleibt das Spiel immer frisch und spannend.</p>
-                </div>
-
-                <div class="featured-section__image featured-section__image--home" aria-label="Spiel Feature"></div>
-            </section>
-
-            <section class="hero-feature hero-feature--cartflash">
-            </section>
-
-            <section class="feature-cards">
-                <article class="feature-card">
-                    <div class="feature-card__icon">🏎️</div>
-                    <h3>Eine vielfältige Auto-Flotte</h3>
-                    <p>Wähle aus über 50 sorgfältig modellierten Fahrzeugen von Klassikern bis zu modernen Supersportwagen. Jedes Auto hat seine eigenen Charakteristiken und Fahreigenschaften.</p>
-                </article>
-
-                <article class="feature-card">
-                    <div class="feature-card__icon">🌍</div>
-                    <h3>Mehrere Level und Welten</h3>
-                    <p>Erkunde unterschiedliche Rennpisten und Umgebungen: von urbanen Straßenrennen bis zu spektakulären Bergstrecken. Jeder Level bietet neue Herausforderungen und Überraschungen.</p>
-                </article>
-
-                <article class="feature-card">
-                    <div class="feature-card__icon">👥</div>
-                    <h3>Online Multiplayer</h3>
-                    <p>Treten gegen Spieler aus der ganzen Welt an. Beweise deine Rennkünste und erklimme die globale Rangliste im intensiven Online-Wettkampf.</p>
-                </article>
-
-                <article class="feature-card">
-                    <div class="feature-card__icon">⭐</div>
-                    <h3>Regelmäßige Events</h3>
-                    <p>Neue Rennen, Herausforderungen und exklusive Fahrzeuge erscheinen regelmäßig. Verdiene Belohnungen und schalte spezielle Inhalte frei.</p>
-                </article>
-            </section>
-        </main>
-
-        <footer class="site-footer">
-            <div class="site-footer__inner">
-                <div class="site-footer__links">
-                    <a href="impressum.html">Impressum</a>
-                    <a href="ueber-uns.html">Über uns</a>
-                </div>
-                <div class="site-footer__brand">Left Lane</div>
-                <div class="site-footer__social" aria-label="Social Media Links">
-                    <a href="#" aria-label="Instagram">Instagram</a>
-                    <a href="#" aria-label="YouTube">YouTube</a>
-                    <a href="#" aria-label="TikTok">TikTok</a>
-                </div>
-            </div>
-        </footer>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="#top" class="brand">
+        <img src="race-car-logo.svg" alt="Left Lane Logo" />
+        <span>Left Lane</span>
+      </a>
+      <div class="nav-links">
+        <a href="#news">News</a>
+        <a href="#spiel">Spiel</a>
+        <a href="#trailer">Trailer</a>
+        <a href="#team">Team</a>
+        <a href="#impressum">Impressum</a>
+      </div>
     </div>
-    <button class="scroll-to-top" id="scrollToTop" aria-label="Nach oben scrollen">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="18 15 10 7 2 15"></polyline>
-        </svg>
-    </button>
-    <script src="script.js"></script>
+  </nav>
+
+  <main id="top">
+    <section class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Mobile Racing Project</span>
+          <h1>Drive fast. <span class="gradient">Stay in the Left Lane.</span></h1>
+          <p>
+            Left Lane ist ein moderner Rennfahr-Simulator für das Handy. Tritt gegen Bots oder Freunde an,
+            wähle Strecke, Rundendauer und Autofarbe selbst aus und entdecke versteckte Easter Eggs, die wir als Team im Spiel eingebaut haben.
+          </p>
+          <div class="button-row">
+            <a class="btn btn-primary" href="#spiel">Spiel entdecken</a>
+            <a class="btn btn-secondary" href="#team">Unser Team</a>
+          </div>
+        </div>
+
+        <div class="hero-panel">
+          <div class="hero-visual">
+            <div class="track"></div>
+            <img class="car" src="race-car-logo.svg" alt="Stylisiertes Rennauto" />
+            <div class="hero-stats">
+              <div class="stat"><strong>1v1 & Bots</strong><span>Renne allein oder gegen Freunde</span></div>
+              <div class="stat"><strong>Custom Setup</strong><span>Strecke, Dauer und Farbe wählen</span></div>
+              <div class="stat"><strong>Hidden Secrets</strong><span>Easter Eggs vom Team entdecken</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="news" class="section">
+      <div class="container">
+        <span class="eyebrow">Aktuelles</span>
+        <h2 class="section-title">Neuigkeiten rund um Left Lane</h2>
+        <p class="section-copy"></p>
+
+        <div class="news-grid">
+          <article class="card">
+            <div class="card-pad">
+              <span class="tag">Neu</span>
+              <h3>JETZT AUCH ONLINE!</h3>
+              <p>Mit dem neuesten Update von Left Lane kannst du endlich deine Freunde zu einem spannenden Rennen herausfordern und direkt gegeneinander antreten.</p>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-pad">
+              <span class="tag">Update</span>
+              <h3>INDIVIDUALISIERE DEIN EIGENES AUTO!</h3>
+              <p>Ab sofort kannst du Farbe und Modell deines Autos selbst auswählen, damit dein Fahrzeug nicht nur schnell ist, sondern auch genau zu deinem Stil passt.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="spiel" class="section">
+      <div class="container">
+        <span class="eyebrow">Spielbeschreibung</span>
+        <h2 class="section-title">Ein Racing-Game mit Stil, Geschwindigkeit und Persönlichkeit</h2>
+        <p class="section-copy"></p>
+
+        <div class="game-grid">
+          <div class="card showcase">
+            <div class="art">
+              <div class="road"></div>
+              <img class="mini-car" src="race-car-logo.svg" alt="Rennwagen Illustration" />
+            </div>
+          </div>
+
+          <div class="feature-grid">
+            <article class="card feature">
+              <div class="card-pad">
+                <h3>Rennen gegen Bots oder Freunde</h3>
+                <p>Left Lane bietet dir die Möglichkeit, alleine gegen KI-Gegner oder gemeinsam mit Freunden spannende Rennen zu fahren.</p>
+              </div>
+            </article>
+            <article class="card feature">
+              <div class="card-pad">
+                <h3>Individuelle Einstellungen</h3>
+                <p>Strecke, Rundendauer und Autofarbe können vor jedem Rennen angepasst werden, damit jedes Match anders wirkt.</p>
+              </div>
+            </article>
+            <article class="card feature">
+              <div class="card-pad">
+                <h3>Versteckte Easter Eggs</h3>
+                <p>Im Spiel sind mehrere kleine Überraschungen eingebaut, die von uns Schülern inspiriert wurden und das Projekt persönlicher machen.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="trailer" class="section">
+      <div class="container">
+        <span class="eyebrow">Trailer</span>
+        <h2 class="section-title">Bald mit echtem Gameplay-Material</h2>
+        <p class="section-copy"></p>
+
+        <div class="card trailer-box">
+          <div class="card-pad" style="max-width: 720px;">
+            <div class="play">▶</div>
+            <h3 style="font-size: 1.8rem; margin: 0 0 .8rem;">Gameplay-Trailer folgt</h3>
+            <p style="color: var(--muted); margin: 0;">
+              Mateo erstellt aktuell einen realistischen Trailer mit echtem Gameplay und der passenden Stimmung des Spiels.
+              Sobald das Video fertig ist, wird es direkt hier eingebunden.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="team" class="section">
+      <div class="container">
+        <span class="eyebrow">Team</span>
+        <h2 class="section-title">Das Team hinter Left Lane</h2>
+        <p class="section-copy"></p>
+
+        <div class="team-grid">
+          <article class="card team-card">
+            <img src="max.jpeg" alt="Porträt von Max Haidler" />
+            <div class="card-pad">
+              <div class="team-meta">
+                <h3 style="margin: 0;">Max Haidler</h3>
+                <span class="role">Website</span>
+              </div>
+              <p>Max gestaltet und entwickelt die Website und repräsentiert Left Lane zusätzlich auf Social Media.</p>
+            </div>
+          </article>
+
+          <article class="card team-card">
+            <img src="gabriel.jpeg" alt="Porträt von Gabriel-Christian Tulea" />
+            <div class="card-pad">
+              <div class="team-meta">
+                <h3 style="margin: 0;">Gabriel-Christian Tulea</h3>
+                <span class="role">Game Dev</span>
+              </div>
+              <p>Gabriel übernimmt die technische Entwicklung des Spiels und ist für die eigentliche Programmierarbeit verantwortlich.</p>
+            </div>
+          </article>
+
+          <article class="card team-card">
+            <img src="mateo.jpeg" alt="Porträt von Mateo Pocrnja" />
+            <div class="card-pad">
+              <div class="team-meta">
+                <h3 style="margin: 0;">Mateo Pocrnja</h3>
+                <span class="role">Trailer</span>
+              </div>
+              <p>Mateo erstellt einen Gameplay-Trailer, der die Emotionen, Dynamik und den Stil von Left Lane in einem kurzen Video zeigt.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="impressum">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="race-car-logo.svg" alt="Left Lane Logo" />
+          <div>
+            <strong style="font-size: 1.05rem;">Left Lane</strong>
+            <p>Schulprojekt der 4AHK IMCM 2026. Dunkler, moderner Racing-Look mit klar getrennten Bereichen für News, Spiel, Trailer und Team.</p>
+          </div>
+        </div>
+        <div class="footer-meta">
+          <p><strong>Schule:</strong> BHAK Liezen</p>
+          <p><strong>Adresse:</strong> Dr.-Karl-Renner-Ring 40, 8940 Liezen</p>
+          <p><strong>Kontakt:</strong> <a href="mailto:leftlane@hak-web.at">leftlane@hak-web.at</a></p>
+          <p><strong>Verantwortlich:</strong> Max Haidler, Mateo Pocrnja und Gabriel-Christian Tulea</p>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 Left Lane – Schulprojekt</div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
