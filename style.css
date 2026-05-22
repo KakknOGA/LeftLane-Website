@@ -585,6 +585,67 @@ a {
   color: var(--muted);
 }
 
+.review-section {
+  margin-top: 2.4rem;
+  padding: 2rem;
+  border-radius: 28px;
+  background: linear-gradient(180deg, #121212 0%, #0b0b0b 100%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.28);
+}
+
+.review-title {
+  color: #ffffff;
+  margin-bottom: 1.4rem;
+}
+
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.1rem;
+}
+
+.review-card {
+  background: #050505;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 2rem 2rem 1.8rem;
+  min-height: 270px;
+  color: #ffffff;
+}
+
+.review-stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 1.08rem;
+  letter-spacing: 0.12em;
+  color: #f7b548;
+  font-weight: 800;
+  margin-bottom: 0.9rem;
+}
+
+.review-stars span {
+  letter-spacing: 0;
+  font-size: 0.92rem;
+}
+
+.review-meta {
+  margin: 0 0 1.1rem;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.96rem;
+}
+
+.review-card h3 {
+  margin: 0 0 0.9rem;
+  font-size: 1.08rem;
+  color: #ffffff;
+}
+
+.review-card p:last-child {
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.6;
+}
+
 .game-grid {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
@@ -892,8 +953,18 @@ footer {
   .news-grid,
   .feature-grid,
   .team-grid,
-  .quick-links {
+  .quick-links,
+  .review-grid {
     grid-template-columns: 1fr;
+  }
+
+  .review-section {
+    padding: 1.3rem;
+  }
+
+  .review-card {
+    min-height: 0;
+    padding: 1.4rem 1.2rem 1.25rem;
   }
 
   .section {
