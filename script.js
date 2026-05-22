@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const nav = document.querySelector('.nav');
     const navLinks = document.querySelectorAll('.nav-links a');
     const startsideImage = document.getElementById('startsideImage');
     const homeGalleryImage = document.getElementById('homeGalleryImage');
@@ -8,6 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const galleryThumbs = document.querySelectorAll('.gallery-thumb');
     let galleryIndex = 0;
     let galleryIntervalId = null;
+    let lastScrollY = window.scrollY || 0;
+    let scrollFrameId = null;
 
     navLinks.forEach(function(link) {
         const href = link.getAttribute('href');
@@ -22,6 +25,32 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     const scrollToTopBtn = document.getElementById('scrollToTop');
+
+    function syncNavSpacing() {
+        if (!nav) return;
+        document.body.style.paddingTop = nav.offsetHeight + 'px';
+    }
+
+    function updateNavState() {
+        if (!nav) return;
+
+        const scrollY = window.scrollY || 0;
+
+        if (scrollY <= 24) {
+            nav.classList.remove('nav-scrolled');
+            nav.classList.remove('nav-hidden');
+        } else {
+            nav.classList.add('nav-scrolled');
+
+            if (scrollY > lastScrollY + 6) {
+                nav.classList.add('nav-hidden');
+            } else if (scrollY < lastScrollY - 6) {
+                nav.classList.remove('nav-hidden');
+            }
+        }
+
+        lastScrollY = scrollY;
+    }
 
     function setGallerySlide(index, animate) {
         if (!homeGalleryImage || galleryThumbs.length === 0) return;
@@ -106,6 +135,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    syncNavSpacing();
+    updateNavState();
+
+    window.addEventListener('resize', function() {
+        syncNavSpacing();
+    });
+
     if (homeGalleryImage && galleryThumbs.length > 0) {
         galleryThumbs.forEach(function(thumb, index) {
             thumb.addEventListener('click', function() {
@@ -127,7 +163,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     window.addEventListener('scroll', function() {
-        updateScrollEffects();
+        if (scrollFrameId) return;
+
+        scrollFrameId = window.requestAnimationFrame(function() {
+            updateNavState();
+            updateScrollEffects();
+            scrollFrameId = null;
+        });
     }, { passive: true });
 
     updateScrollEffects();
