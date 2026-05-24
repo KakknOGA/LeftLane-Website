@@ -107,14 +107,10 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateScrollEffects() {
         const scrollY = window.scrollY;
 
+        // Removed parallax and fade effect on the start image
         if (startsideImage) {
-            const progress = Math.min(scrollY / 520, 1);
-            const scale = 1 - (progress * 0.28);
-            const translateY = progress * 70;
-            const opacity = 1 - progress;
-
-            startsideImage.style.transform = 'translateY(' + translateY + 'px) scale(' + scale + ')';
-            startsideImage.style.opacity = String(opacity);
+            startsideImage.style.transform = '';
+            startsideImage.style.opacity = '1';
         }
 
         if (scrollToTopBtn) {
