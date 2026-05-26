@@ -24,7 +24,7 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 
-document.querySelectorAll(".feature-card,.news-card,.team-card,.patch").forEach(card => {
+document.querySelectorAll(".feature-card,.news-card,.gallery-card,.team-card,.patch").forEach(card => {
   card.addEventListener("mousemove", e => {
     const r = card.getBoundingClientRect();
     const x = e.clientX - r.left;
