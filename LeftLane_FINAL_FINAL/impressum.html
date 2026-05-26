@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Impressum — LeftLane</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .legal-page{min-height:100vh;padding:150px 8% 90px;}
+    .legal-card{max-width:980px;margin:0 auto;border-radius:34px;padding:clamp(28px,5vw,56px);background:rgba(255,255,255,.065);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(15px);box-shadow:0 20px 60px rgba(0,0,0,.28)}
+    .legal-card h1{font-family:Orbitron,sans-serif;font-size:clamp(2.6rem,7vw,5.5rem);line-height:.95;margin:18px 0 28px;text-shadow:0 0 20px rgba(255,33,79,.45)}
+    .legal-card h2{font-family:Orbitron,sans-serif;font-size:1.25rem;margin:34px 0 12px;color:white}
+    .legal-card p{color:var(--muted);line-height:1.8;margin-bottom:8px}
+    .legal-card a{color:var(--blue);text-decoration:none}
+    .legal-card a:hover{color:white;text-shadow:0 0 16px var(--blue)}
+    .legal-note{margin-top:32px;padding-top:24px;border-top:1px solid rgba(255,255,255,.12);font-size:.95rem}
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav>
+    <a href="index.html" class="brand">
+      <img src="logo.png" alt="LeftLane Logo">
+    </a>
+
+    <div class="nav-links">
+      <a href="index.html#game" data-de="Spiel" data-en="Game">Spiel</a>
+      <a href="index.html#news" data-de="Neuigkeiten" data-en="News">Neuigkeiten</a>
+      <a href="index.html#team" data-de="Team" data-en="Team">Team</a>
+      <a href="index.html#contact" data-de="Kontakt" data-en="Contact">Kontakt</a>
+    </div>
+
+    <button id="langToggle">EN</button>
+  </nav>
+</header>
+
+<main class="legal-page">
+  <section class="legal-card reveal">
+    <span class="section-kicker" data-de="Rechtliche Angaben" data-en="Legal Information">Rechtliche Angaben</span>
+    <h1 data-de="Impressum" data-en="Legal Notice">Impressum</h1>
+
+    <h2 data-de="Betreiber dieser Website / Medieninhaber" data-en="Website Operator / Media Owner">Betreiber dieser Website / Medieninhaber</h2>
+    <p><strong>Max Haidler</strong></p>
+    <p>Dr.-Karl-Renner-Ring 40</p>
+    <p>8940 Liezen</p>
+    <p>Österreich</p>
+
+    <h2 data-de="Kontakt" data-en="Contact">Kontakt</h2>
+    <p>E-Mail: <a href="mailto:leftlane.austria@hotmail.com">leftlane.austria@hotmail.com</a></p>
+    <p>Instagram: <a href="https://www.instagram.com/leftlane.austria/" target="_blank" rel="noopener">@leftlane.austria</a></p>
+
+    <h2 data-de="Projekt" data-en="Project">Projekt</h2>
+    <p data-de="LeftLane ist ein unabhängiges mobiles Rennspiel-Projekt." data-en="LeftLane is an independent mobile racing game project.">LeftLane ist ein unabhängiges mobiles Rennspiel-Projekt.</p>
+
+    <h2 data-de="Verantwortlich für den Inhalt" data-en="Responsible for Content">Verantwortlich für den Inhalt</h2>
+    <p>Max Haidler</p>
+
+    <h2 data-de="Haftungshinweis" data-en="Liability Notice">Haftungshinweis</h2>
+    <p data-de="Die Inhalte dieser Website werden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte übernehmen wir jedoch keine Gewähr." data-en="The content of this website is created with the greatest possible care. However, we do not guarantee the accuracy, completeness or timeliness of the content.">Die Inhalte dieser Website werden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte übernehmen wir jedoch keine Gewähr.</p>
+    <p data-de="Für externe Links sind ausschließlich deren Betreiber verantwortlich." data-en="The operators of external links are solely responsible for their content.">Für externe Links sind ausschließlich deren Betreiber verantwortlich.</p>
+
+  </section>
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <h3><a href="index.html">LeftLane</a></h3>
+      <p data-de="Mobiles Rennspiel-Projekt" data-en="Mobile racing game project">Mobiles Rennspiel-Projekt</p>
+    </div>
+    <div>
+      <h4 data-de="Rechtliches" data-en="Legal">Rechtliches</h4>
+      <p><a href="impressum.html" data-de="Impressum" data-en="Legal Notice">Impressum</a></p>
+    </div>
+    <div>
+      <h4 data-de="Kontakt" data-en="Contact">Kontakt</h4>
+      <p><a href="mailto:leftlane.austria@hotmail.com">leftlane.austria@hotmail.com</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
